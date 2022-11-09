@@ -124,10 +124,10 @@ class DateIterator:
 if __name__ == '__main__':
     try:
         file_name = 'dataset.csv'
-        folder_name_years = 'data_to_years_output'
-        folder_name_weeks = 'data_to_weeks_output'
-        file_name_x = 'divide_data_output//X.csv'
-        file_name_y = 'divide_data_output//Y.csv'
+        folder_name_years = 'years_output'
+        folder_name_weeks = 'weeks_output'
+        file_name_x = 'divide_output//X.csv'
+        file_name_y = 'divide_output//Y.csv'
 
         date = datetime.date(2009, 3, 8)
         invalid_date = datetime.date(2222, 5, 20)

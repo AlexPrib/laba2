@@ -12,7 +12,7 @@ def name_for_file(first_part: str, second_part: str) -> str:
     """
     f_p = first_part.replace('-', '') + '_'
     s_p = second_part.replace('-', '') + '.csv'
-    return os.path.join('data_to_years_output', f_p + s_p)
+    return os.path.join('years_output', f_p + s_p)
 
 
 def get_year_from_data(data: list[list[str]], index: int) -> int:
@@ -46,8 +46,8 @@ def data_to_years(file_name: str) -> None:
 
     if os.path.exists(file_name):
 
-        if not os.path.exists('data_to_years_output'):
-            os.mkdir('data_to_years_output')
+        if not os.path.exists('years_output'):
+            os.mkdir('years_output')
 
         with open(file_name, 'r', encoding='utf-8') as csvfile:
             reader_object = list(csv.reader(csvfile, delimiter=","))
