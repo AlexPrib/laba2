@@ -1,10 +1,9 @@
 import csv
 import os
-from typing import NoReturn
 
-#script that will split the original csv file into an X.csv and Y.csv file
-def divide_data(file_name: str) -> NoReturn:
-    """Function that divides date and data to different csv files
+
+def divide_data(file_name: str) -> None:
+    """script that will split the original csv file into an X.csv and Y.csv file
     Args:
         file_name: Path to file
     Raises:

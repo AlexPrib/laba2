@@ -3,7 +3,7 @@ import datetime
 import os
 
 
-def get_data_from_x_y(file_name_x: str, file_name_y: str, date: datetime.date) -> list[str] or None:
+def get_x_y(file_name_x: str, file_name_y: str, date: datetime.date) -> list[str] or None:
     """Function finds information about date from X.csv and Y.csv files
     Args:
         file_name_x: Path to file that contains dates
@@ -38,7 +38,7 @@ def get_data_from_x_y(file_name_x: str, file_name_y: str, date: datetime.date) -
     raise FileNotFoundError
 
 
-def get_data_from_years_and_weeks(folder_name: str, date: datetime.date) -> list[str] or None:
+def get_y_w(folder_name: str, date: datetime.date) -> list[str] or None:
     """Function finds information about date from csv files that contains data 
     Args:
         folder_name_years: Path to folder that contains .csv files
@@ -142,35 +142,35 @@ if __name__ == '__main__':
         # while(True):
         #     print(next(obj))
 
-        #валидная датой
-        result = get_data_from_x_y(file_name_x, file_name_y, date)
+        #валидная дата
+        result = get_x_y(file_name_x, file_name_y, date)
         print(result)
 
-        #невалидная датой
-        result = get_data_from_x_y(file_name_x, file_name_y, invalid_date)
+        #невалидная дата
+        result = get_x_y(file_name_x, file_name_y, invalid_date)
         print(result)
 
-        #валидная датой
-        result = get_data_from_years_and_weeks(folder_name_years, date)
+        #валидная дата
+        result = get_y_w(folder_name_years, date)
         print(result)
 
-        #невалидная датой
-        result = get_data_from_years_and_weeks(folder_name_years, invalid_date)
+        #невалидная дата
+        result = get_y_w(folder_name_years, invalid_date)
         print(result)
 
-        #валидная датой
-        result = get_data_from_years_and_weeks(folder_name_weeks, date)
+        #валидная дата
+        result = get_y_w(folder_name_weeks, date)
         print(result)
 
-        #невалидная датой
-        result = get_data_from_years_and_weeks(folder_name_weeks, invalid_date)
+        #невалидная дата
+        result = get_y_w(folder_name_weeks, invalid_date)
         print(result)
 
-        #валидная датой
+        #валидная дата
         result = get_data(file_name, date)
         print(result)
 
-        #невалидная датой
+        #невалидная дата
         result = get_data(file_name, invalid_date)
         print(result)
 
