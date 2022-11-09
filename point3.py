@@ -93,8 +93,7 @@ def week_border(data: list[list[str]], index) -> list[str]:
         list[str]: A list of the days of one week
     """
 
-    date = datetime.date(get_year_from_data(data, index), get_month_from_data(
-        data, index), get_day_from_data(data, index))
+    date = datetime.date(get_year_from_data(data, index), get_month_from_data(data, index), get_day_from_data(data, index))
     weekday = date.isoweekday()
 
     week = []
